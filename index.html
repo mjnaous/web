@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>mohamad</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 4rem;
+      background: #111;
+      color: #eee;
+      font-family: monospace;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    a {
+      color: #7dbfff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .highlight {
+      background-color: rgba(0, 102, 204, 0.4);
+      color: white;
+      padding: 0 0.25em;
+      border-radius: 2px;
+    }
+
+    .nav {
+      margin-bottom: 3rem;
+      font-size: 1.1rem;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      margin-right: 2rem;
+    }
+
+    h1 {
+      font-size: 4rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+
+    .links {
+      margin-top: 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      font-size: 1.2rem;
+    }
+
+    .links a {
+      padding-bottom: 2px;
+      border-bottom: 1px solid rgba(125, 191, 255, 0.4);
+      transition: all 0.2s ease;
+    }
+
+    .links a:hover {
+      color: #a3d8ff;
+      border-bottom-color: #7dbfff;
+    }
+
+    .stats-section {
+      margin-top: 5rem;
+    }
+
+    .stats-section h2 {
+      color: #00a9e2;
+      font-size: 26px;
+    }
+
+    .tinylytics_hits,
+    .tinylytics_countries {
+      color: #7dbfff;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    #footer {
+      margin-top: 5rem;
+      text-align: center;
+      color: #666;
+      font-size: 1rem;
+      border-top: 1px solid #333;
+      padding-top: 1.5rem;
+    }
+
+    #footer a {
+      color: #555;
+      text-decoration: none;
+    }
+
+    #footer a:hover {
+      color: #aaa;
+    }
+
+    /* === MOBILE STYLES === */
+    @media (max-width: 600px) {
+      body {
+        padding: 1.5rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .nav a {
+        margin-right: 1rem;
+        display: inline-block;
+        margin-bottom: 0.5rem;
+      }
+
+      .links {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .links a {
+        font-size: 1rem;
+      }
+
+::selection {
+  background-color: white;
+  color: black;
+  }
+
+  a::selection {
+    color: #00a9e2;
+  }
+    }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <a href="/">Home</a>
+    <a href="/contact">Contact</a>
+    <a href="/now">/now</a>
+    <a href="//abuabed.naous.eu.org">Nekat Abu Abed</a>
+    <a href="/class">Classified Op</a>
+  </div>
+
+  <h1>mohamad</h1>
+
+  <p>Hello, I'm <span class="highlight">Mohamad</span>.</p>
+  <p>
+    I'm a 16-year-old from <span class="highlight">Beirut, Lebanon</span>.<br>
+    I like writing frontend <span class="highlight">code</span>, tinkering with computers, and making weird experiments online.<br>
+    I'm into casual <span class="highlight">gaming</span>, digital design, and learning about <span class="highlight">tech & security</span>.
+  </p>
+
+  <p>Here’s where you can find me:</p>
+  <div class="links">
+    <a href="https://github.com/mjnaous">GitHub</a>
+    <a href="mailto:mj@naous.eu.org">Email</a>
+    <a href="/colophon">Colophon</a>
+    <a href="/rss.xml">RSS</a>
+  </div>
+
+  <h2><a style="color:#00a9e2;font-size:26px;text-decoration:none;">#</a>Stats</h2>      
+<p>Total visits :</p> <span class="tinylytics_hits"></span>
+<p>Countries that people visited my website from: </p> <span class="tinylytics_countries"></span>
+
+<script src="https://tinylytics.app/embed/DLGomzi-z5_nxgsh3646.js?kudo&hits&countries&webring" defer></script>
+<div id=footer class=mb-5><hr><div class="container text-center">
+  <a href="https://github.com/mjnaous" title="mohamad">
+  mohamad © 2025
+  </a>
+</div>
+
+  <script>
+    const konami = [38,38,40,40,37,39,37,39,66,65];
+    let inputBuffer = [];
+
+    window.addEventListener("keydown", function(e) {
+      inputBuffer.push(e.keyCode); 
+      inputBuffer.splice(-konami.length - 1, inputBuffer.length - konami.length);
+
+      if (inputBuffer.join(',') === konami.join(',')) {
+        alert("Hey, you found the easter egg!");
+        document.body.style.backgroundColor = "#000"; 
+        document.body.style.color = "#ffd1dc";           
+      }
+    });
+  </script>
+</body>
+</html>
+
